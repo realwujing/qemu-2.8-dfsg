@@ -17,7 +17,7 @@
 #include "atomic.h"
 
 #define BITS_PER_BYTE           CHAR_BIT
-#define BITS_PER_LONG           (sizeof (unsigned long) * BITS_PER_BYTE)
+#define BITS_PER_LONG           (__SIZEOF_LONG__ * BITS_PER_BYTE)
 
 #define BIT(nr)                 (1UL << (nr))
 #define BIT_MASK(nr)            (1UL << ((nr) % BITS_PER_LONG))
